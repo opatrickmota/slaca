@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0 auto;
     }
     body{
-        background: #E5E5E5;
+        background: #FFFFFF;
         -webkit-font-smoothing: antialiased !important;
     }
  
@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
         --gray-dark: #EAF1F2;
         --purple: #71478E;
         --white: #FFFFFF;
+        --brown: #725C5C;
     }
 `
 
