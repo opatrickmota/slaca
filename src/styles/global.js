@@ -20,13 +20,12 @@ const GlobalStyle = createGlobalStyle`
     body, input, button {
         font-family: 'Roboto', sans-serif;
         overflow-x: hidden;
+        cursor: default;
     }
     a{
         text-decoration: none;
     }
-    button{
-        cursor: pointer;
-    }
+
     :root{
         --orange: #ED7839;
         --orange-light: #FDF1EB;

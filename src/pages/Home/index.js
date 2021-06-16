@@ -13,14 +13,27 @@ import {
     Titles,
     Texts,
     User,
-    ButtonLanguage
+    ButtonLanguage,
+    Main,
+    Video,
+    Play,
+    AutorVideo,
+    MainRight,
+    Share,
+    Card,
+    Buttons,
+    Button
 } from './styles'
 
 import logo from '../../assets/logo.png'
 import video from '../../assets/video.png'
+import imageVideo from '../../assets/image-video.png'
 import image from '../../assets/image.svg'
 import world from '../../assets/world.svg'
 import dropdown from '../../assets/dropdown.svg'
+import download from '../../assets/download.svg'
+import star from '../../assets/star.svg'
+import doi from '../../assets/doi.svg'
 
 export default function Home(){
     return(
@@ -61,7 +74,49 @@ export default function Home(){
                     </User>
                 </HeaderSectionRight>
                 <ContainerSectionRight>
-                    
+                    <Main>
+                        <Video>
+                            <h1>
+                                Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
+                            </h1>
+                            <Play background={video}>
+                                <div>
+                                    <h1>
+                                        Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
+                                    </h1>
+                                    <AutorVideo>
+                                        <img src={imageVideo} alt="Autor do video"/>
+                                        <section>
+                                            <h1>Beatriz Christiane Melo</h1>
+                                            <h2>FCA / Universidade Estadual de Campinas</h2> 
+                                        </section>
+                                        
+                                    </AutorVideo>
+                                </div>
+                                
+                            </Play>
+                        </Video>
+                        <MainRight>
+                            <Share>
+                                <Buttons>
+                                    <Button>
+                                        <img src={download} alt="Icone de download"/>
+                                        Download
+                                    </Button>
+                                    <Button>
+                                        <img src={star} alt="Icone de estrela"/>
+                                    </Button>
+                                    <Button>
+                                        <img src={doi} alt="Icone com a palavra Doi"/>
+                                    </Button> 
+                                </Buttons>
+                                <p>COMO CITAR ESSE TRABALHO?</p>
+                            </Share>
+                            <Card>
+                                
+                            </Card>
+                        </MainRight>
+                    </Main>
                 </ContainerSectionRight>
             </SectionRight>
         </Container>

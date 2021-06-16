@@ -130,3 +130,128 @@ export const Texts = styled.div`
         line-height: 15px;
     }
 `
+
+export const Main = styled.div`
+    display: flex;
+`
+
+export const Video = styled.div`
+    max-width: 62%;
+    height: 100%;
+    h1{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: var(--orange);
+        margin-bottom: 19px;
+    }
+`
+export const Play = styled.div`
+    height: 439px;
+    background: url(${props => props.background}) no-repeat; 
+    border-radius: 3px;
+    position: relative;
+    div{
+        position: absolute;
+        background: rgba(141,53,6,0.5);
+        width: 784px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 35px;
+    }
+
+    h1{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: var(--white);
+    }
+`
+
+export const AutorVideo = styled.section`
+    display: flex;
+    align-items: center;
+
+    bottom: 60px;
+    position: absolute;
+
+    img{
+        margin-right: 15px;
+        padding: 2px;
+        border-radius: 50%;
+        border: 1px solid var(--orange);
+    }
+
+    h1{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: var(--white);
+        margin: 0 0 5px;
+    }
+    h2{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: var(--white);
+    }
+    
+`
+
+export const MainRight = styled.div`
+    width: 20%;
+`
+
+export const Share = styled.div`
+    p{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        color: var(--orange);
+        margin-top: 18px;
+    }
+`
+
+export const Buttons = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+`
+
+export const Button = styled.button`
+    background: var(--orange);
+    border: 0;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    padding: 6px 12px;
+    height: 38px;
+    margin-left: 5px;
+    cursor: default;
+
+    img{
+        margin-right: 5px;
+    }
+`
+
+export const Card = styled.div``
