@@ -22,7 +22,12 @@ import {
     Share,
     Card,
     Buttons,
-    Button
+    Button,
+    HeaderCard,
+    MainCard,
+    Paragraph,
+    Strong,
+    FooterCard
 } from './styles'
 
 import logo from '../../assets/logo.png'
@@ -113,7 +118,26 @@ export default function Home(){
                                 <p>COMO CITAR ESSE TRABALHO?</p>
                             </Share>
                             <Card>
-                                
+                                <HeaderCard>Detalhes</HeaderCard>
+                                <MainCard>
+                                    <Paragraph>Tipo de apresentação: <Strong>Pôster</Strong></Paragraph>
+                                    <Paragraph>Eixo temático: <Strong>Alimentação e saúde (AS)</Strong></Paragraph>
+                                    <Paragraph>Palavras-chaves: <Strong> Alimentos funcionais, alimentação escolar</Strong></Paragraph>
+                                    
+                                    <Paragraph fontSize={20} marginTop="20px"><Strong>Autores:</Strong></Paragraph>
+                                    <Paragraph fontSize={20}>Galileo Galilei¹</Paragraph>
+                                    <Paragraph fontSize={20}>Berta Lange de Morretes²</Paragraph>
+                                    <Paragraph fontSize={20}>Isaac Newton³</Paragraph>
+                                    <Paragraph fontSize={20}>Cesar Lattes¹</Paragraph>
+                                    <Paragraph fontSize={20}>Stephen Hawking⁴</Paragraph>
+
+                                    <FooterCard>
+                                        <Paragraph>¹Universidade Estadual de Campinas</Paragraph>
+                                        <Paragraph>²Universidade de São Paulo</Paragraph>
+                                        <Paragraph>³Instituto Nacional de Pesquisas Espaciais</Paragraph>
+                                        <Paragraph>⁴Universidade Federal do Rio de Janeiro</Paragraph>
+                                    </FooterCard>
+                                </MainCard>
                             </Card>
                         </MainRight>
                     </Main>

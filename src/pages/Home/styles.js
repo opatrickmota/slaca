@@ -43,7 +43,7 @@ export const ActiveItem = styled.div`
 `
 
 export const SectionRight = styled.div`
-    margin-left: 220px;
+    padding-left: 220px;
     background-color: var(--white);
 `;
 
@@ -155,6 +155,7 @@ export const Play = styled.div`
     border-radius: 3px;
     position: relative;
     div{
+        border-radius: 3px;
         position: absolute;
         background: rgba(141,53,6,0.5);
         width: 784px;
@@ -254,4 +255,54 @@ export const Button = styled.button`
     }
 `
 
-export const Card = styled.div``
+export const Card = styled.div`
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 3px;
+`
+
+export const HeaderCard = styled.div`
+    background: #FDF1EB;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 3px 3px 0px 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--text-dark);
+    padding: 11px 15px;
+`
+
+export const MainCard = styled.div`
+    padding: 11px 15px;
+`
+
+export const Paragraph = styled.p`
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: ${props => props.fontSize ? props.fontSize : '12px'};
+    line-height: 15px;
+    margin-bottom: 5px;
+    margin-top: ${props => props.marginTop ? props.marginTop : '0px'};
+    opacity: 0.8;
+`
+
+export const Strong = styled.strong`
+    font-weight: 700;
+`
+
+export const FooterCard = styled.div`
+    margin-top: 20px;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    opacity: 0.6;
+`
