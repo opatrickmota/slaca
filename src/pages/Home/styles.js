@@ -51,7 +51,6 @@ export const HeaderSectionRight = styled.header`
     display: flex;
     align-items: center;
     background: var(--orange-light);
-    width: 100vw;
     padding: 22px 0;
     padding: 10px 45px;
 `
@@ -132,12 +131,13 @@ export const Texts = styled.div`
 `
 
 export const Main = styled.div`
-    display: flex;
+    display: block;
 `
 
-export const Video = styled.div`
-    max-width: 62%;
-    height: 100%;
+export const MainHeader = styled.header`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
     h1{
         font-family: Roboto;
         font-style: normal;
@@ -147,10 +147,32 @@ export const Video = styled.div`
         letter-spacing: 0.05em;
         color: var(--orange);
         margin-bottom: 19px;
+        max-width: 62%;
     }
+
+    @media (max-width: 1020px){
+        display: block;
+        h1{
+            max-width: 100%;
+        }
+    }
+`
+
+export const MainContentVideo = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1424px){
+        display: block;
+    }
+`
+
+export const Video = styled.div`
+    height: 100%;
 `
 export const Play = styled.div`
     height: 439px;
+    width: 784px;
     background: url(${props => props.background}) no-repeat; 
     border-radius: 3px;
     position: relative;
@@ -173,6 +195,13 @@ export const Play = styled.div`
         line-height: 25px;
         letter-spacing: 0.05em;
         color: var(--white);
+    }
+
+    @media (max-width: 1424px){
+        max-width: 784px;
+        div{
+            max-width: 784px;
+        }
     }
 `
 
@@ -214,6 +243,11 @@ export const AutorVideo = styled.section`
 
 export const MainRight = styled.div`
     width: 20%;
+
+    @media (max-width: 1424px){
+        margin-top: 20px;
+        width: 100%;
+    }
 `
 
 export const Share = styled.div`

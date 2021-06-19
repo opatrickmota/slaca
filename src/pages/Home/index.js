@@ -27,7 +27,9 @@ import {
     MainCard,
     Paragraph,
     Strong,
-    FooterCard
+    FooterCard,
+    MainHeader,
+    MainContentVideo
 } from './styles'
 
 import logo from '../../assets/logo.png'
@@ -80,28 +82,10 @@ export default function Home(){
                 </HeaderSectionRight>
                 <ContainerSectionRight>
                     <Main>
-                        <Video>
+                        <MainHeader>
                             <h1>
                                 Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
                             </h1>
-                            <Play background={video}>
-                                <div>
-                                    <h1>
-                                        Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
-                                    </h1>
-                                    <AutorVideo>
-                                        <img src={imageVideo} alt="Autor do video"/>
-                                        <section>
-                                            <h1>Beatriz Christiane Melo</h1>
-                                            <h2>FCA / Universidade Estadual de Campinas</h2> 
-                                        </section>
-                                        
-                                    </AutorVideo>
-                                </div>
-                                
-                            </Play>
-                        </Video>
-                        <MainRight>
                             <Share>
                                 <Buttons>
                                     <Button>
@@ -117,29 +101,52 @@ export default function Home(){
                                 </Buttons>
                                 <p>COMO CITAR ESSE TRABALHO?</p>
                             </Share>
-                            <Card>
-                                <HeaderCard>Detalhes</HeaderCard>
-                                <MainCard>
-                                    <Paragraph>Tipo de apresentação: <Strong>Pôster</Strong></Paragraph>
-                                    <Paragraph>Eixo temático: <Strong>Alimentação e saúde (AS)</Strong></Paragraph>
-                                    <Paragraph>Palavras-chaves: <Strong> Alimentos funcionais, alimentação escolar</Strong></Paragraph>
-                                    
-                                    <Paragraph fontSize={20} marginTop="20px"><Strong>Autores:</Strong></Paragraph>
-                                    <Paragraph fontSize={20}>Galileo Galilei¹</Paragraph>
-                                    <Paragraph fontSize={20}>Berta Lange de Morretes²</Paragraph>
-                                    <Paragraph fontSize={20}>Isaac Newton³</Paragraph>
-                                    <Paragraph fontSize={20}>Cesar Lattes¹</Paragraph>
-                                    <Paragraph fontSize={20}>Stephen Hawking⁴</Paragraph>
+                        </MainHeader>
+                        <MainContentVideo>
+                            <Video>
+                                <Play background={video}>
+                                    <div>
+                                        <h1>
+                                            Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
+                                        </h1>
+                                        <AutorVideo>
+                                            <img src={imageVideo} alt="Autor do video"/>
+                                            <section>
+                                                <h1>Beatriz Christiane Melo</h1>
+                                                <h2>FCA / Universidade Estadual de Campinas</h2> 
+                                            </section>
+                                            
+                                        </AutorVideo>
+                                    </div>
+                                </Play>
+                            </Video> 
+                            <MainRight>
+                                <Card>
+                                    <HeaderCard>Detalhes</HeaderCard>
+                                    <MainCard>
+                                        <Paragraph>Tipo de apresentação: <Strong>Pôster</Strong></Paragraph>
+                                        <Paragraph>Eixo temático: <Strong>Alimentação e saúde (AS)</Strong></Paragraph>
+                                        <Paragraph>Palavras-chaves: <Strong> Alimentos funcionais, alimentação escolar</Strong></Paragraph>
+                                        
+                                        <Paragraph fontSize={20} marginTop="20px"><Strong>Autores:</Strong></Paragraph>
+                                        <Paragraph fontSize={20}>Galileo Galilei¹</Paragraph>
+                                        <Paragraph fontSize={20}>Berta Lange de Morretes²</Paragraph>
+                                        <Paragraph fontSize={20}>Isaac Newton³</Paragraph>
+                                        <Paragraph fontSize={20}>Cesar Lattes¹</Paragraph>
+                                        <Paragraph fontSize={20}>Stephen Hawking⁴</Paragraph>
 
-                                    <FooterCard>
-                                        <Paragraph>¹Universidade Estadual de Campinas</Paragraph>
-                                        <Paragraph>²Universidade de São Paulo</Paragraph>
-                                        <Paragraph>³Instituto Nacional de Pesquisas Espaciais</Paragraph>
-                                        <Paragraph>⁴Universidade Federal do Rio de Janeiro</Paragraph>
-                                    </FooterCard>
-                                </MainCard>
-                            </Card>
-                        </MainRight>
+                                        <FooterCard>
+                                            <Paragraph>¹Universidade Estadual de Campinas</Paragraph>
+                                            <Paragraph>²Universidade de São Paulo</Paragraph>
+                                            <Paragraph>³Instituto Nacional de Pesquisas Espaciais</Paragraph>
+                                            <Paragraph>⁴Universidade Federal do Rio de Janeiro</Paragraph>
+                                        </FooterCard>
+                                    </MainCard>
+                                </Card>
+                            </MainRight>
+                        </MainContentVideo>
+                        
+                        
                     </Main>
                 </ContainerSectionRight>
             </SectionRight>
