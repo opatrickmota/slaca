@@ -50,16 +50,28 @@ export const SectionRight = styled.div`
 export const HeaderSectionRight = styled.header`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: var(--orange-light);
     padding: 22px 0;
     padding: 10px 45px;
+
+    @media(max-width: 824px){
+        display: block;
+    }
+`
+
+export const UserButtons = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 `
 
 export const ButtonLanguage = styled.button`
     display: flex;
     align-items: center;
+    width: max-content;
+    margin-right: 20px;
     padding: 4px;
-    margin: 0 22px 0 100px;
     background: none;
     border: 1px solid #CCCCCC;
     box-sizing: border-box;
@@ -70,6 +82,7 @@ export const ButtonLanguage = styled.button`
     font-size: 14px;
     line-height: 17px;
     color: #333333;
+    
 
     img{
         margin: 0 3px;
@@ -198,9 +211,11 @@ export const Play = styled.div`
     }
 
     @media (max-width: 1424px){
+        width: auto;
         max-width: 784px;
         div{
             max-width: 784px;
+            width: auto;
         }
     }
 `

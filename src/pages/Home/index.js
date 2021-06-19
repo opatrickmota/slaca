@@ -9,6 +9,7 @@ import {
     ActiveItem,
     SectionRight,
     HeaderSectionRight,
+    UserButtons,
     ContainerSectionRight,
     Titles,
     Texts,
@@ -68,18 +69,20 @@ export default function Home(){
                         <h1>Anais do 13º Simpósio Latino Americano de Ciência de Alimentos </h1>
                         <span>ISSN: 1234-5678</span> 
                     </Titles>
-                    <ButtonLanguage>
-                        <img src={world} alt=""/>
-                        PT, BR
-                        <img src={dropdown} alt=""/>
-                    </ButtonLanguage>
-                    <User>
-                        <Texts>
-                            <h3>Bem vindo!</h3>
-                            <p>alguem12@galoascience.com</p>
-                        </Texts>
-                        <img src={image} alt="Foto do usuario logado"/>
-                    </User>
+                    <UserButtons>
+                        <ButtonLanguage>
+                            <img src={world} alt=""/>
+                            PT, BR
+                            <img src={dropdown} alt=""/>
+                        </ButtonLanguage>
+                        <User>
+                            <Texts>
+                                <h3>Bem vindo!</h3>
+                                <p>alguem12@galoascience.com</p>
+                            </Texts>
+                            <img src={image} alt="Foto do usuario logado"/>
+                        </User>
+                    </UserButtons>
                 </HeaderSectionRight>
                 <ContainerSectionRight>
                     <Main>
