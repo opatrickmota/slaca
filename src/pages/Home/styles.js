@@ -335,6 +335,7 @@ export const HeaderCard = styled.div`
 `
 
 export const MainCard = styled.div`
+    display: ${props => props.isExpanded ? 'none' : 'block'};
     padding: 11px 15px;
 `
 
@@ -368,4 +369,12 @@ export const FooterCard = styled.div`
 
 export const OrangeText = styled.strong`
     color: var(--orange);
+`
+
+export const HiddenContent = styled.div`
+    display: ${props => props.isExpanded ? 'block' : 'none'};
+    padding: 11px 15px;
+    p+p{
+        margin-top: 50px;
+    }
 `
