@@ -55,7 +55,7 @@ export const HeaderSectionRight = styled.header`
     padding: 22px 0;
     padding: 10px 45px;
 
-    @media(max-width: 824px){
+    @media(max-width: 1100px){
         display: block;
     }
 `
@@ -64,6 +64,10 @@ export const UserButtons = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media(max-width: 1100px){
+        margin-top: 20px;
+    }
 `
 
 export const ButtonLanguage = styled.button`
