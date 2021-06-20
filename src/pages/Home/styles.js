@@ -380,6 +380,7 @@ export const HiddenContent = styled.div`
 `
 
 export const SecondHeader = styled.div`
+    display: ${props => props.display ?  props.display: 'block'};
     text-align: center;
     max-width: 500px;
     margin: auto;
@@ -390,10 +391,12 @@ export const SecondHeader = styled.div`
 
     button{
         margin: 17px 0 0;
+        cursor: pointer;
     }
 `
 
 export const Comment = styled.div`
+    display: ${props => props.display ? props.display : 'block'};
     background: #FFFFFF;
     border: 1px solid #E7E7E7;
     box-sizing: border-box;
@@ -402,6 +405,7 @@ export const Comment = styled.div`
     padding: 15px 20px;
     margin-top: 17px;
     cursor: ${props => props.clickable ? 'pointer': 'default'};
+    position: ${props => props.position ? props.position : ''};
 `
 
 export const Interact = styled.div`
@@ -444,3 +448,51 @@ export const AutorResponse = styled.div`
     }
 `
 
+export const Blur = styled.div`
+    background: rgba(dd, dd, dd, 0.9);
+    -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const BlurContent = styled.div`
+    text-align: center;
+`
+
+export const Form = styled.div`
+    display: none;
+    h1{
+        color: var(--text);
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    p{
+        margin-top: 10px;
+    }
+    input, textarea{
+        padding: 10px 15px;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    textarea{
+        width: 100%;
+        resize: none;
+    }
+    div{
+        width: 100%;
+        text-align: right;
+    }
+    button{
+        cursor: pointer;
+    }
+`

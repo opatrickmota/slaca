@@ -6,7 +6,7 @@ import {
 
 export default function ButtonComponent(props){
     return(
-        <Button>
+        <Button onClick={()=> props.method()}>
             {props.children}
         </Button>
     )

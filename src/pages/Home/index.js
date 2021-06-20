@@ -31,7 +31,10 @@ import {
     Interact,
     Response,
     HeaderResponse,
-    AutorResponse
+    AutorResponse,
+    Blur,
+    BlurContent,
+    Form
 } from './styles'
 
 import logo from '../../assets/logo.png'
@@ -96,6 +99,36 @@ export default function Home(){
                 e.style.display = 'block'
             })
         }
+    }
+
+    function create(){
+        if(document.getElementById("create")){
+            document.getElementById("create").style.display = 'none'
+        }
+
+        if(document.getElementById("form")){
+            document.getElementById("form").style.display = 'block'
+        }
+
+        if(document.getElementById("success")){
+            document.getElementById("success").style.display = 'none'
+        }
+
+        if(document.getElementById("blur")){
+            document.getElementById("blur").style.display = 'none'
+        }
+    }
+
+    function enviar(){
+        if(document.getElementById("blur")){
+            document.getElementById("form").style.display = 'none'
+            document.getElementById("blur").style.display = 'block'
+        }
+
+        if(document.getElementById("success")){
+            document.getElementById("success").style.display = 'block'
+        }
+
     }
 
     return(
@@ -239,7 +272,7 @@ export default function Home(){
                         <CardContainer>
                             <HeaderCard>Discussões</HeaderCard>
                             <MainCard>
-                                <SecondHeader>
+                                <SecondHeader id="create">
                                     <Paragraph fontSize="14px">
                                         <Strong>
                                             <OrangeText>Compartilhe suas ideias ou dúvidas com os autores!</OrangeText>
@@ -254,11 +287,51 @@ export default function Home(){
                                     Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
                                     </Paragraph>
 
-                                    <Button>
+                                    <Button method={()=>create()}>
                                         + criar tópico
                                     </Button>  
                                 </SecondHeader>
-                                
+
+                                <Form id="form">
+                                    <h1>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h1>
+                                    <Paragraph><OrangeText>Assunto</OrangeText></Paragraph>
+                                    <input placeholder="Defina um tópico sucinto para notificar os autores..." />
+                                    <Paragraph><OrangeText>Conteúdo</OrangeText></Paragraph>
+                                    <textarea />
+                                    <div>
+                                        <Button method={()=>enviar()}>Enviar</Button>
+                                    </div>
+                                </Form>
+                                <SecondHeader display="none" id="success">
+                                    <Paragraph fontSize="18px">
+                                        <Strong>
+                                            <OrangeText>Seu tópico foi enviado com sucesso! :D</OrangeText>
+                                        </Strong>
+                                    </Paragraph>
+                                    <Paragraph marginTop="18px" fontSize="14px" >Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</Paragraph>
+                                    <Paragraph marginTop="29px" fontSize="14px"><OrangeText>Descubra outros trabalhos!</OrangeText></Paragraph>
+                                    
+                                    <Button method={()=>create()}>criar novo tópico</Button>
+                                </SecondHeader>
+                                <Comment id="blur" display="none" position="relative">
+                                    <Paragraph>
+                                        <Strong>
+                                            <OrangeText>Assunto da pergunta aparece aqui</OrangeText>
+                                        </Strong>
+                                    </Paragraph>
+                                    <Paragraph fontSize="10px"><Strong>Carlos Henrique Santos</Strong></Paragraph>
+                                    <Paragraph>
+                                        Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                                    </Paragraph>
+                                    <Blur>
+                                        <BlurContent>
+                                            <FaCheckDouble/>
+                                            <Paragraph><Strong>Aguardando feedback dos autores</Strong></Paragraph>
+                                            <Paragraph><OrangeText>Editar tópico</OrangeText></Paragraph>
+                                        </BlurContent>
+                                    </Blur>
+                                </Comment>
+
                                 <Comment>
                                     <Paragraph>
                                         <Strong>
