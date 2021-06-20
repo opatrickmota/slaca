@@ -52,11 +52,14 @@ export const HeaderSectionRight = styled.header`
     align-items: center;
     justify-content: space-between;
     background: var(--orange-light);
-    padding: 22px 0;
     padding: 10px 45px;
 
     @media(max-width: 1100px){
         display: block;
+    }
+
+    @media (max-width: 900px){
+        padding: 10px;
     }
 `
 
@@ -95,6 +98,10 @@ export const ButtonLanguage = styled.button`
 
 export const ContainerSectionRight = styled.div`
     padding: 45px;
+
+    @media (max-width: 900px){
+        padding: 10px;
+    }
 `
 
 export const Titles = styled.div`
@@ -222,6 +229,15 @@ export const Play = styled.div`
             width: auto;
         }
     }
+
+    @media (max-width: 900px){
+        h1{
+            font-size: 18px;
+        }
+        div{
+            padding: 8px;
+        }
+    }
 `
 
 export const AutorVideo = styled.section`
@@ -256,6 +272,15 @@ export const AutorVideo = styled.section`
         line-height: 25px;
         letter-spacing: 0.05em;
         color: var(--white);
+    }
+
+    @media (max-width: 900px){
+        h1{
+            font-size: 22px;
+        }
+        h2{
+            font-size: 14px;
+        }
     }
     
 `

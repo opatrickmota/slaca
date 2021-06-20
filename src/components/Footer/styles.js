@@ -47,5 +47,6 @@ export const Logo = styled.div`
 export const TextFooter = styled.div`
     @media(max-width: 1090px){
         margin-top: 20px;
+        margin-left: 0;
     }
 `
