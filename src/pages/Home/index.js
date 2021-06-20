@@ -21,17 +21,8 @@ import {
     AutorVideo,
     MainRight,
     Share,
-    Card,
-    Buttons,
-    Button,
-    HeaderCard,
-    MainCard,
-    Paragraph,
-    Strong,
-    FooterCard,
     MainHeader,
     MainContentVideo,
-    OrangeText,
     HiddenContent
 } from './styles'
 
@@ -45,11 +36,21 @@ import download from '../../assets/download.svg'
 import star from '../../assets/star.svg'
 import doi from '../../assets/doi.svg'
 
+import CardContainer from '../../components/CardContainer'
+import HeaderCard from '../../components/HeaderCard'
+import MainCard from '../../components/MainCard'
+import FooterCard from '../../components/FooterCard'
+import Paragraph from '../../components/Paragraph'
+import Strong from '../../components/TextStrong'
+import OrangeText from '../../components/OrangeText'
+import Buttons from '../../components/ButtonsContainer'
+import Button from '../../components/Button'
+
 export default function Home(){
     const [isExpanded, setIsExpanded] = useState(false)
 
-    function toogleResume(state){
-        setIsExpanded(state)
+    function toggleResume(){
+        setIsExpanded(!isExpanded)
     }
 
     return(
@@ -132,7 +133,7 @@ export default function Home(){
                                 </Play>
                             </Video> 
                             <MainRight>
-                                <Card>
+                                <CardContainer>
                                     <HeaderCard>Detalhes</HeaderCard>
                                     <MainCard>
                                         <Paragraph>Tipo de apresentação: <Strong>Pôster</Strong></Paragraph>
@@ -153,17 +154,17 @@ export default function Home(){
                                             <Paragraph>⁴Universidade Federal do Rio de Janeiro</Paragraph>
                                         </FooterCard>
                                     </MainCard>
-                                </Card>
+                                </CardContainer>
                             </MainRight>
                         </MainContentVideo>
                         
-                        <Card clickable={true}>
+                        <CardContainer clickable={true}>
                             <HeaderCard>Resumo</HeaderCard>
-                            <MainCard isExpanded={isExpanded} onClick={() => toogleResume(true)}>
+                            <MainCard toggleResume={toggleResume} isExpanded={isExpanded}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... 
                                 <OrangeText>ver mais</OrangeText>
                             </MainCard>
-                            <HiddenContent isExpanded={isExpanded} onClick={() => toogleResume(false)}>
+                            <HiddenContent onClick={toggleResume} isExpanded={isExpanded}>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.
                                 </p>
@@ -177,7 +178,7 @@ export default function Home(){
                                     Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                                 </p>
                             </HiddenContent>
-                        </Card>
+                        </CardContainer>
                         
                     </Main>
                 </ContainerSectionRight>
