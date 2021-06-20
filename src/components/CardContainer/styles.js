@@ -4,7 +4,7 @@ export const Card = styled.div`
     border: 1px solid #ECECEC;
     box-sizing: border-box;
     border-radius: 3px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 
     cursor: ${props => props.clickable ? 'pointer': 'default'};
 

@@ -10,5 +10,4 @@ export const FooterCard = styled.div`
     line-height: 120%;
     letter-spacing: 0.02em;
     color: var(--text);
-    opacity: 0.6;
 `

@@ -1,8 +1,43 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
 `
+
+export const IconMenu = styled.div`
+    position: relative;
+
+    @media(min-width: 1100px){
+        display: none;
+    }
+`
+
+export const ToggleMenu = styled.div`
+    position: fixed;
+    width: 100vw;
+    padding: 10px;
+    text-align: right;
+
+    div{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        background-color: var(--purple);
+        padding: 10px;
+        border-radius: 3px;
+    }
+    
+`
+
+const animationMenu = keyframes`
+  from{
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+`;
 
 export const SectionLeft = styled.div`
     position: fixed;
@@ -10,6 +45,19 @@ export const SectionLeft = styled.div`
     height: 100vh;
     background-color: var(--white);
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.087);
+
+    @media(min-width: 1100px){
+        display: block;
+    }
+
+    @media(max-width: 1100px){
+        display: none;
+        
+        animation-name: ${animationMenu};
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: both;
+    }
 `;
 
 export const HeaderLogo = styled.header`
@@ -45,6 +93,10 @@ export const ActiveItem = styled.div`
 export const SectionRight = styled.div`
     padding-left: 220px;
     background-color: var(--white);
+
+    @media(max-width: 1100px){
+        padding-left: 0;
+    }
 `;
 
 export const HeaderSectionRight = styled.header`
@@ -229,6 +281,12 @@ export const Play = styled.div`
             width: auto;
         }
     }
+    @media (max-width: 1100px){
+        position: unset;
+        div{
+            position: unset;
+        }
+    }
 
     @media (max-width: 900px){
         h1{
@@ -272,6 +330,11 @@ export const AutorVideo = styled.section`
         line-height: 25px;
         letter-spacing: 0.05em;
         color: var(--white);
+    }
+
+    @media (max-width: 1100px){
+        position: unset;
+        height: inherit;
     }
 
     @media (max-width: 900px){

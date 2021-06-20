@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import {
     Container,
+    ToggleMenu,
+    IconMenu,
     SectionLeft,
     HeaderLogo,
     Listas,
@@ -36,6 +38,8 @@ import download from '../../assets/download.svg'
 import star from '../../assets/star.svg'
 import doi from '../../assets/doi.svg'
 
+import {FaBars, FaTimes} from 'react-icons/fa'
+
 import CardContainer from '../../components/CardContainer'
 import HeaderCard from '../../components/HeaderCard'
 import MainCard from '../../components/MainCard'
@@ -49,14 +53,36 @@ import Footer from '../../components/Footer'
 
 export default function Home(){
     const [isExpanded, setIsExpanded] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
 
     function toggleResume(){
         setIsExpanded(!isExpanded)
     }
 
+    function toggleMenu(){
+        setIsOpen(!isOpen)
+
+        if(isOpen){
+            document.getElementById("menu").style.display = 'none'
+        }else{
+            document.getElementById("menu").style.display = 'block'
+        }
+    }
+
     return(
         <Container>
-            <SectionLeft>
+            <IconMenu>
+                <ToggleMenu onClick={()=>toggleMenu()}>
+                    <div>
+                        {
+                            isOpen ? <FaTimes size={20} color="#fff" /> 
+                            : <FaBars size={20} color="#fff" />
+                        }    
+                    </div>
+                    
+                </ToggleMenu> 
+            </IconMenu>
+            <SectionLeft id="menu">
                 <HeaderLogo>
                     SLACA 2019
                 </HeaderLogo>

@@ -8,5 +8,4 @@ export const Paragraph = styled.p`
     line-height: 15px;
     margin-bottom: 5px;
     margin-top: ${props => props.marginTop ? props.marginTop : '0px'};
-    opacity: 0.8;
 `
