@@ -25,7 +25,13 @@ import {
     Share,
     MainHeader,
     MainContentVideo,
-    HiddenContent
+    HiddenContent,
+    SecondHeader,
+    Comment,
+    Interact,
+    Response,
+    HeaderResponse,
+    AutorResponse
 } from './styles'
 
 import logo from '../../assets/logo.png'
@@ -37,8 +43,13 @@ import dropdown from '../../assets/dropdown.svg'
 import download from '../../assets/download.svg'
 import star from '../../assets/star.svg'
 import doi from '../../assets/doi.svg'
+import letras from '../../assets/letras.svg'
+import people from '../../assets/people.svg'
+import plant from '../../assets/plant.svg'
+import head from '../../assets/head.svg'
+import moreInformation from '../../assets/moreInformation.svg'
 
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {FaBars, FaTimes, FaCheckDouble} from 'react-icons/fa'
 
 import CardContainer from '../../components/CardContainer'
 import HeaderCard from '../../components/HeaderCard'
@@ -54,6 +65,7 @@ import Footer from '../../components/Footer'
 export default function Home(){
     const [isExpanded, setIsExpanded] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
+    const [response, setResponse] = useState(false)
 
     function toggleResume(){
         setIsExpanded(!isExpanded)
@@ -66,6 +78,23 @@ export default function Home(){
             document.getElementById("menu").style.display = 'none'
         }else{
             document.getElementById("menu").style.display = 'block'
+        }
+    }
+
+    function toggleResponse(){
+        setResponse(!response)
+
+        let elements = document.getElementsByClassName("response")
+        elements = Object.values(elements)
+
+        if(response){
+            elements.forEach(e => {
+                e.style.display = 'none'
+            })
+        }else{
+            elements.forEach(e => {
+                e.style.display = 'block'
+            })
         }
     }
 
@@ -207,6 +236,119 @@ export default function Home(){
                             </HiddenContent>
                         </CardContainer>
                         
+                        <CardContainer>
+                            <HeaderCard>Discussões</HeaderCard>
+                            <MainCard>
+                                <SecondHeader>
+                                    <Paragraph fontSize="14px">
+                                        <Strong>
+                                            <OrangeText>Compartilhe suas ideias ou dúvidas com os autores!</OrangeText>
+                                        </Strong>
+                                    </Paragraph>
+
+                                    <img src={letras} alt="Letras"/>
+                                    <img src={people} alt="Pessoas"/>
+                                    <img src={plant} alt="Planta"/>
+
+                                    <Paragraph>
+                                    Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!
+                                    </Paragraph>
+
+                                    <Button>
+                                        + criar tópico
+                                    </Button>  
+                                </SecondHeader>
+                                
+                                <Comment>
+                                    <Paragraph>
+                                        <Strong>
+                                            <OrangeText>Assunto da pergunta aparece aqui</OrangeText>
+                                        </Strong>
+                                    </Paragraph>
+                                    <Paragraph fontSize="10px"><Strong>Carlos Henrique Santos</Strong></Paragraph>
+                                    <Paragraph>
+                                        Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                                    </Paragraph>
+
+                                    <Interact>
+                                        <img src={moreInformation} alt="Mais informações"/>
+                                        <Button>
+                                            <img src={head} alt="coração"/>
+                                        </Button>
+                                        <span>1 like</span>
+                                        <span>1 resposta</span>
+                                    </Interact>
+                                </Comment>
+                                <Comment clickable={true} onClick={()=>toggleResponse()}>
+                                    <Paragraph>
+                                        <Strong>
+                                            <OrangeText>Assunto da pergunta aparece aqui</OrangeText>
+                                        </Strong>
+                                    </Paragraph>
+                                    <Paragraph fontSize="10px"><Strong>Carlos Henrique Santos</Strong></Paragraph>
+                                    <Paragraph>
+                                        Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                                    </Paragraph>
+
+                                    <Interact>
+                                        <img src={moreInformation} alt="Mais informações"/>
+                                        <Button>
+                                            <img src={head} alt="coração"/>
+                                        </Button>
+                                        <span>1 like</span>
+                                        <span>1 resposta</span>
+                                    </Interact>
+                                </Comment>
+                                <Response className="response" background="gray">
+                                    <HeaderResponse>
+                                    <Paragraph fontSize="10px"><Strong>Adriano da Silva</Strong></Paragraph>
+                                        <AutorResponse>
+                                            <OrangeText>Autor</OrangeText>
+                                            <FaCheckDouble/>
+                                        </AutorResponse>
+                                    </HeaderResponse>
+                                    <Paragraph>
+                                        Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                    </Paragraph>
+                                </Response>
+                                <Response className="response">
+                                    <HeaderResponse>
+                                        <Paragraph fontSize="10px"><Strong>Carlos Henrique Santos</Strong></Paragraph>
+                                    </HeaderResponse>
+                                    <Paragraph>
+                                        Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                    </Paragraph>
+                                </Response>
+                                <Response className="response" background="gray">
+                                    <HeaderResponse>
+                                    <Paragraph fontSize="10px"><Strong>Carmila Ferreira Andrade</Strong></Paragraph>
+                                        <AutorResponse>
+                                            <OrangeText>Coautor</OrangeText>
+                                            <FaCheckDouble/>
+                                        </AutorResponse>
+                                    </HeaderResponse>
+                                    <Paragraph>
+                                        Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                    </Paragraph>
+                                    <Paragraph>
+                                        Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                    </Paragraph>
+                                </Response>
+                                <Response className="response" background="gray">
+                                    <HeaderResponse>
+                                    <Paragraph fontSize="10px"><Strong>Ana Carolina</Strong></Paragraph>
+                                        <AutorResponse>
+                                            <OrangeText>Coautor</OrangeText>
+                                            <FaCheckDouble/>
+                                        </AutorResponse>
+                                    </HeaderResponse>
+                                    <Paragraph>
+                                        Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+                                    </Paragraph>
+                                </Response>
+                                
+                            </MainCard>
+                        </CardContainer>
                         <Footer/>
                     </Main>
                 </ContainerSectionRight>

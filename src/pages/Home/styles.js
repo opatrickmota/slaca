@@ -378,3 +378,69 @@ export const HiddenContent = styled.div`
         margin-top: 50px;
     }
 `
+
+export const SecondHeader = styled.div`
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+
+    img {
+        margin: 20px 0 20px 20px;
+    }
+
+    button{
+        margin: 17px 0 0;
+    }
+`
+
+export const Comment = styled.div`
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin-top: 17px;
+    cursor: ${props => props.clickable ? 'pointer': 'default'};
+`
+
+export const Interact = styled.div`
+    display: flex;
+    align-items: center;
+
+    button{
+        border-radius: 2px;
+        height: auto;
+        padding:  0 0 0 4px;
+        margin-left: 10px;
+    }
+
+    span{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+`
+
+export const Response = styled.div`
+    background: var(--${props => props.background ?  props.background: '#FFF'});
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    padding: 15px 20px;
+    display: none;
+`
+
+export const HeaderResponse = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const AutorResponse = styled.div`
+    color: var(--orange);
+
+    strong{
+        margin-right: 10px;
+    }
+`
+
