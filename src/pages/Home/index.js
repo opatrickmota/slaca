@@ -45,6 +45,7 @@ import Strong from '../../components/TextStrong'
 import OrangeText from '../../components/OrangeText'
 import Buttons from '../../components/ButtonsContainer'
 import Button from '../../components/Button'
+import Footer from '../../components/Footer'
 
 export default function Home(){
     const [isExpanded, setIsExpanded] = useState(false)
@@ -180,6 +181,7 @@ export default function Home(){
                             </HiddenContent>
                         </CardContainer>
                         
+                        <Footer/>
                     </Main>
                 </ContainerSectionRight>
             </SectionRight>
